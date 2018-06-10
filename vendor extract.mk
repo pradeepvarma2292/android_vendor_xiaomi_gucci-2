@@ -18,13 +18,13 @@
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/gucci/proprietary/bin/adsprpcd:system/bin/adsprpcd \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libadsprpc.so:system/vendor/lib/libadsprpc.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/libfastcvadsp_stub.so:system/vendor/lib/libfastcvadsp_stub.so \
+#vendor/xiaomi/gucci/proprietary/vendor/lib/libfastcvadsp_stub.so:system/vendor/lib/libfastcvadsp_stub.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libfastcvopt.so:system/vendor/lib/libfastcvopt.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/rfsa/adsp/libadsp_denoise_skel.so:system/vendor/lib/rfsa/adsp/libadsp_denoise_skel.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/rfsa/adsp/libapps_mem_heap.so:system/vendor/lib/rfsa/adsp/libapps_mem_heap.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/rfsa/adsp/libdspCV_skel.so:system/vendor/lib/rfsa/adsp/libdspCV_skel.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/rfsa/adsp/libfastcvadsp.so:system/vendor/lib/rfsa/adsp/libfastcvadsp.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/rfsa/adsp/libfastcvadsp_skel.so:system/vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
+#vendor/xiaomi/gucci/proprietary/vendor/lib/rfsa/adsp/libadsp_denoise_skel.so:system/vendor/lib/rfsa/adsp/libadsp_denoise_skel.so \
+#vendor/xiaomi/gucci/proprietary/vendor/lib/rfsa/adsp/libapps_mem_heap.so:system/vendor/lib/rfsa/adsp/libapps_mem_heap.so \
+#vendor/xiaomi/gucci/proprietary/vendor/lib/rfsa/adsp/libdspCV_skel.so:system/vendor/lib/rfsa/adsp/libdspCV_skel.so \
+#vendor/xiaomi/gucci/proprietary/vendor/lib/rfsa/adsp/libfastcvadsp.so:system/vendor/lib/rfsa/adsp/libfastcvadsp.so \
+#vendor/xiaomi/gucci/proprietary/vendor/lib/rfsa/adsp/libfastcvadsp_skel.so:system/vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -35,7 +35,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gucci/proprietary/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb:system/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb \
     vendor/xiaomi/gucci/proprietary/etc/acdbdata/MTP/MTP_Headset_cal.acdb:system/etc/acdbdata/MTP/MTP_Headset_cal.acdb \
     vendor/xiaomi/gucci/proprietary/etc/acdbdata/MTP/MTP_Speaker_cal.acdb:system/etc/acdbdata/MTP/MTP_Speaker_cal.acdb \
-    vendor/xiaomi/gucci/proprietary/lib/hw/audio_policy.msm8226.so:system/lib/hw/audio_policy.msm8226.so \
+    vendor/xiaomi/gucci/proprietary/lib/hw/audio_policy.msm8226.so:system/lib/hw/audio_policy.msm8916.so \
     vendor/xiaomi/gucci/proprietary/lib/soundfx/libdirac.so:system/lib/soundfx/libdirac.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libacdbloader.so:system/vendor/lib/libacdbloader.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libacdbrtac.so:system/vendor/lib/libacdbrtac.so \
@@ -125,11 +125,295 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gucci/proprietary/etc/firmware/cpp_firmware_v1_1_1.fw:system/etc/firmware/cpp_firmware_v1_1_1.fw \
     vendor/xiaomi/gucci/proprietary/etc/firmware/cpp_firmware_v1_1_6.fw:system/etc/firmware/cpp_firmware_v1_1_6.fw \
     vendor/xiaomi/gucci/proprietary/etc/firmware/cpp_firmware_v1_2_0.fw:system/etc/firmware/cpp_firmware_v1_2_0.fw
-
+	vendor/xiaomi/gucci/proprietary/etc/firmware/cpp_firmware_v1_4_0.fw:system/etc/firmware/cpp_firmware_v1_4_0.fw
+	
+	
 # Chromatix
-chromatix_files := $(shell ls vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix*)
-PRODUCT_COPY_FILES += $(foreach file, $(chromatix_files), \
-        $(file):system/vendor/lib/$(shell basename $(file)))
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx132_common.so:system/vendor/lib/libchromatix_imx132_common.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx132_default_video.so:system/vendor/lib/libchromatix_imx132_default_video.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx132_liveshot.so:system/vendor/lib/libchromatix_imx132_liveshot.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx132_preview.so:system/vendor/lib/libchromatix_imx132_preview.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx132_snapshot.so:system/vendor/lib/libchromatix_imx132_snapshot.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx134_common.so:system/vendor/lib/libchromatix_imx134_common.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx134_default_video.so:system/vendor/lib/libchromatix_imx134_default_video.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx134_hfr_60.so:system/vendor/lib/libchromatix_imx134_hfr_60.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx134_hfr_120.so:system/vendor/lib/libchromatix_imx134_hfr_120.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx134_preview.so:system/vendor/lib/libchromatix_imx134_preview.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx134_snapshot.so:system/vendor/lib/libchromatix_imx134_snapshot.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx135_common.so:system/vendor/lib/libchromatix_imx135_common.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx135_default_video.so:system/vendor/lib/libchromatix_imx135_default_video.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx135_hfr_60.so:system/vendor/lib/libchromatix_imx135_hfr_60.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx135_hfr_90.so:system/vendor/lib/libchromatix_imx135_hfr_90.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx135_hfr_120.so:system/vendor/lib/libchromatix_imx135_hfr_120.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx135_preview.so:system/vendor/lib/libchromatix_imx135_preview.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx135_snapshot.so:system/vendor/lib/libchromatix_imx135_snapshot.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_imx135_video_hd.so:system/vendor/lib/libchromatix_imx135_video_hd.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov2680_5987fhq_common.so:system/vendor/lib/libchromatix_ov2680_5987fhq_common.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov2680_5987fhq_default_video.so:system/vendor/lib/libchromatix_ov2680_5987fhq_default_video.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov2680_5987fhq_preview.so:system/vendor/lib/libchromatix_ov2680_5987fhq_preview.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov2680_5987fhq_snapshot.so:system/vendor/lib/libchromatix_ov2680_5987fhq_snapshot.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov2680_common.so:system/vendor/lib/libchromatix_ov2680_common.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov2680_default_video.so:system/vendor/lib/libchromatix_ov2680_default_video.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov2680_preview.so:system/vendor/lib/libchromatix_ov2680_preview.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov2680_snapshot.so:system/vendor/lib/libchromatix_ov2680_snapshot.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov2720_common.so.so:system/vendor/lib/libchromatix_ov2720_common.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov2720_default_video.so:system/vendor/lib/libchromatix_ov2720_default_video.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov2720_hfr.so:system/vendor/lib/libchromatix_ov2720_hfr.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov2720_liveshot.so:system/vendor/lib/libchromatix_ov2720_liveshot.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov2720_preview.so:system/vendor/lib/libchromatix_ov2720_preview.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov2720_zsl.so:system/vendor/lib/libchromatix_ov2720_zsl.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_oty5f03_common.so:system/vendor/lib/libchromatix_ov5648_oty5f03_common.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_oty5f03_default_video.so:system/vendor/lib/libchromatix_ov5648_oty5f03_default_video.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_oty5f03_preview.so:system/vendor/lib/libchromatix_ov5648_oty5f03_preview.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_oty5f03_snapshot.so:system/vendor/lib/libchromatix_ov5648_oty5f03_snapshot.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_oty5f03_zsl.so:system/vendor/lib/libchromatix_ov5648_oty5f03_zsl.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_p5v18g_common.so:system/vendor/lib/libchromatix_ov5648_p5v18g_common.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_p5v18g_default_video.so:system/vendor/lib/libchromatix_ov5648_p5v18g_default_video.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_p5v18g_default_video_hd.so:system/vendor/lib/libchromatix_ov5648_p5v18g_default_video_hd.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_p5v18g_preview.so:system/vendor/lib/libchromatix_ov5648_p5v18g_preview.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_p5v18g_snapshot.so:system/vendor/lib/libchromatix_ov5648_p5v18g_snapshot.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_p5v18g_zsl.so:system/vendor/lib/libchromatix_ov5648_p5v18g_zsl.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_q5v22e_common.so:system/vendor/lib/libchromatix_ov5648_q5v22e_common.so\
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_q5v22e_default_video.so:system/vendor/lib/libchromatix_ov5648_q5v22e_default_video.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_q5v22e_default_video_hd.so:system/vendor/lib/libchromatix_ov5648_q5v22e_default_video_hd.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_q5v22e_preview.so:system/vendor/lib/libchromatix_ov5648_q5v22e_preview.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_q5v22e_snapshot.so:system/vendor/lib/libchromatix_ov5648_q5v22e_snapshot.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5648_q5v22e_zsl.so:system/vendor/lib/libchromatix_ov5648_q5v22e_zsl.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_common.so:system/vendor/lib/libchromatix_ov5670_q5v41b_common.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_default_video.so:system/vendor/lib/libchromatix_ov5670_q5v41b_default_video.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_preview.so:system/vendor/lib/libchromatix_ov5670_q5v41b_preview.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_hfr_60fps.so:system/vendor/lib/libchromatix_ov5670_q5v41b_hfr_60fps.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_hfr_90fps.so:system/vendor/lib/libchromatix_ov5670_q5v41b_hfr_90fps.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_hfr_120fps.so:system/vendor/lib/libchromatix_ov5670_q5v41b_hfr_120fps.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_liveshot.so:system/vendor/lib/libchromatix_ov5670_q5v41b_liveshot.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_preview.so:system/vendor/lib/libchromatix_ov5670_q5v41b_preview.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_snapshot.so:system/vendor/lib/libchromatix_ov5670_q5v41b_snapshot.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_video_hd.so:system/vendor/lib/libchromatix_ov5670_q5v41b_video_hd.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5670_q5v41b_zsl.so:system/vendor/lib/libchromatix_ov5670_q5v41b_zsl.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5693_common.so:system/vendor/lib/libchromatix_ov5693_common.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5693_default_video.so:system/vendor/lib/libchromatix_ov5693_default_video.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5693_preview.so:system/vendor/lib/libchromatix_ov5693_preview.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5693_snapshot.so:system/vendor/lib/libchromatix_ov5693_snapshot.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5693_sny_common.so:system/vendor/lib/libchromatix_ov5693_sny_common.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5693_sny_default_video.so:system/vendor/lib/libchromatix_ov5693_sny_default_video.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5693_sny_preview.so:system/vendor/lib/libchromatix_ov5693_sny_preview.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov5693_sny_snapshot.so:system/vendor/lib/libchromatix_ov5693_sny_snapshot.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8825_common.so:system/vendor/lib/libchromatix_ov8825_common.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8825_default_video.so:system/vendor/lib/libchromatix_ov8825_default_video.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8825_hfr_60fps.so:system/vendor/lib/libchromatix_ov8825_hfr_60fps.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8825_hfr_90fps.so:system/vendor/lib/libchromatix_ov8825_hfr_90fps.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8825_hfr_120fps.so:system/vendor/lib/libchromatix_ov8825_hfr_120fps.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8825_liveshot.so:system/vendor/lib/libchromatix_ov8825_liveshot.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8825_liveshot_hd.so:system/vendor/lib/libchromatix_ov8825_liveshot_hd.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8825_preview.so:system/vendor/lib/libchromatix_ov8825_preview.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8825_preview_hd.so:system/vendor/lib/libchromatix_ov8825_preview_hd.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8825_snapshot.so:system/vendor/lib/libchromatix_ov8825_snapshot.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8825_snapshot_hd.so:system/vendor/lib/libchromatix_ov8825_snapshot_hd.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8825_video_hd.so:system/vendor/lib/libchromatix_ov8825_video_hd.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8825_zsl.so:system/vendor/lib/libchromatix_ov8825_zsl.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_common.so:system/vendor/lib/libchromatix_ov8865_q8v18a_common.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_default_video.so:system/vendor/lib/libchromatix_ov8865_q8v18a_default_video.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_hfr_60fps.so:system/vendor/lib/libchromatix_ov8865_q8v18a_hfr_60fps.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_hfr_90fps.so:system/vendor/lib/libchromatix_ov8865_q8v18a_hfr_90fps.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_hfr_120fps.so:system/vendor/lib/libchromatix_ov8865_q8v18a_hfr_120fps.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_liveshot.so:system/vendor/lib/libchromatix_ov8865_q8v18a_liveshot.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_preview.so:system/vendor/lib/libchromatix_ov8865_q8v18a_preview.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_snapshot.so:system/vendor/lib/libchromatix_ov8865_q8v18a_snapshot.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_video_hd.so:system/vendor/lib/libchromatix_ov8865_q8v18a_video_hd.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov8865_q8v18a_zsl.so:system/vendor/lib/libchromatix_ov8865_q8v18a_zsl.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov9724_common.so:system/vendor/lib/libchromatix_ov9724_common.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov9724_default_video.so:system/vendor/lib/libchromatix_ov9724_default_video.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov9724_liveshot.so:system/vendor/lib/libchromatix_ov9724_liveshot.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov9724_preview.so:system/vendor/lib/libchromatix_ov9724_preview.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov13850_common.so:system/vendor/lib/libchromatix_ov13850_common.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov13850_default_video.so:system/vendor/lib/libchromatix_ov13850_default_video.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov13850_hfr_60fps.so:system/vendor/lib/libchromatix_ov13850_hfr_60fps.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov13850_hfr_90fps.so:system/vendor/lib/libchromatix_ov13850_hfr_90fps.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov13850_hfr_120fps.so:system/vendor/lib/libchromatix_ov13850_hfr_120fps.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov13850_preview.so:system/vendor/lib/libchromatix_ov13850_preview.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_ov13850_snapshot.so:system/vendor/lib/libchromatix_ov13850_snapshot.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_s5k3l1yx_common.so:system/vendor/lib/libchromatix_s5k3l1yx_common.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_s5k3l1yx_default_video.so:system/vendor/lib/libchromatix_s5k3l1yx_default_video.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_s5k3l1yx_hfr_60fps.so:system/vendor/lib/libchromatix_s5k3l1yx_hfr_60fps.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_s5k3l1yx_hfr_90fps.so:system/vendor/lib/libchromatix_s5k3l1yx_hfr_90fps.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_s5k3l1yx_hfr_120fps.so:system/vendor/lib/libchromatix_s5k3l1yx_hfr_120fps.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # libactuator*
 libactuator_files := $(shell ls vendor/xiaomi/gucci/proprietary/vendor/lib/libactuator*)
