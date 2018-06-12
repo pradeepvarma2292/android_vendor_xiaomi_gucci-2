@@ -473,3 +473,10 @@ PRODUCT_COPY_FILES += \
 # Misc
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/gucci/proprietary/vendor/lib/hw/flp.default.so:system/vendor/lib/hw/flp.default.so
+	
+	
+#keylayouts
+	vendor/xiaomi/gucci/proprietary/usr/keylayout/Atmel_maXTouch_Touchscreen.kl:system/usr/keylayout/Atmel_maXTouch_Touchscreen.kl \
+    vendor/semc/mango/proprietary/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    vendor/semc/mango/proprietary/usr/keylayout/ist30xx.kl:system/usr/keylayout/ist30xx.kl 
+    
