@@ -394,7 +394,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gucci/proprietary/bin/mpdecision:system/bin/mpdecision \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libqc-opt.so:system/vendor/lib/libqc-opt.so
 	
-# Qualcomm
+# Qualcomm Frame work
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/gucci/proprietary/bin/irsc_util:system/bin/irsc_util \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libdiag.so:system/vendor/lib/libdiag.so \
@@ -422,10 +422,11 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libconfigdb.so:system/vendor/lib/libconfigdb.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libdsi_netctrl.so:system/vendor/lib/libdsi_netctrl.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libnetmgr.so:system/vendor/lib/libnetmgr.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/libperipheral_client.so:system/vendor/lib/libperipheral_client.so \
+#vendor/xiaomi/gucci/proprietary/vendor/lib/libperipheral_client.so:system/vendor/lib/libperipheral_client.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libril-qc-qmi-1.so:system/vendor/lib/libril-qc-qmi-1.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libril-qcril-hook-oem.so:system/vendor/lib/libril-qcril-hook-oem.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/libsystem_health_mon.so:system/vendor/lib/libsystem_health_mon.so \
+#vendor/xiaomi/gucci/proprietary/vendor/lib/libsystem_health_mon.so:system/vendor/lib/libsystem_health_mon.so \
+	vendor/xiaomi/gucci/proprietary/lib/libxml2.so.so:system/lib/libxml2.so\
     vendor/xiaomi/gucci/proprietary/vendor/lib/libxml.so:system/vendor/lib/libxml.so
 
 # Sensors
