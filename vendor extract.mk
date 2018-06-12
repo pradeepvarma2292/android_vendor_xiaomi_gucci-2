@@ -458,18 +458,18 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gucci/proprietary/etc/firmware/venus.mbn:system/etc/firmware/venus.mbn \
     vendor/xiaomi/gucci/proprietary/etc/firmware/venus.mdt:system/etc/firmware/venus.mdt
 
-# Wifi
+# Prima wlan
 PRODUCT_COPY_FILES += \
-    vendor/xiaomi/gucci/proprietary/etc/firmware/wcnss.b00:system/etc/firmware/wcnss.b00 \
-    vendor/xiaomi/gucci/proprietary/etc/firmware/wcnss.b01:system/etc/firmware/wcnss.b01 \
-    vendor/xiaomi/gucci/proprietary/etc/firmware/wcnss.b02:system/etc/firmware/wcnss.b02 \
-    vendor/xiaomi/gucci/proprietary/etc/firmware/wcnss.b04:system/etc/firmware/wcnss.b04 \
-    vendor/xiaomi/gucci/proprietary/etc/firmware/wcnss.b06:system/etc/firmware/wcnss.b06 \
-    vendor/xiaomi/gucci/proprietary/etc/firmware/wcnss.b07:system/etc/firmware/wcnss.b07 \
-    vendor/xiaomi/gucci/proprietary/etc/firmware/wcnss.b08:system/etc/firmware/wcnss.b08 \
-    vendor/xiaomi/gucci/proprietary/etc/firmware/wcnss.b09:system/etc/firmware/wcnss.b09 \
-    vendor/xiaomi/gucci/proprietary/etc/firmware/wcnss.mdt:system/etc/firmware/wcnss.mdt
-
+    
+    vendor/xiaomi/gucci/proprietary/system/etc/firmware/wlan/prima/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    vendor/xiaomi/gucci/proprietary/system/etc/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+	vendor/xiaomi/gucci/proprietary/system/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+	vendor/xiaomi/gucci/proprietary/system/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf\
+	vendor/xiaomi/gucci/proprietary/system/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf\
+	vendor/xiaomi/gucci/proprietary/system/bin/wpa_supplicant:system/bin\wpa_supplicant\
+	vendor/xiaomi/gucci/proprietary/lib/libwpa_client.so:system/lib/libwpa_client.so/
+	vendor/xiaomi/gucci/proprietary/lib/modules/pronto/pronto_wlan.ko:system/lib/modules/pronto/pronto_wlan.ko
+	
 # Misc
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/gucci/proprietary/vendor/lib/hw/flp.default.so:system/vendor/lib/hw/flp.default.so
