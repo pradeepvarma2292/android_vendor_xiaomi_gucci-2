@@ -369,29 +369,31 @@ PRODUCT_COPY_FILES += \
 
 # Keystore
 PRODUCT_COPY_FILES += \
-	vendor/xiaomi/gucci/proprietary/lib/hw/keystore.default.so:system/lib/hw/keystore.default.so \
 	vendor/xiaomi/gucci/proprietary/lib/hw/keystore.qcom.so:system/vendor/firmware/keymaster/keystore.qcom.so
+	vendor/xiaomi/gucci/proprietary/lib/hw/keystore.default.so:system/lib/hw/keystore.default.so \
+	vendor/xiaomi/gucci/proprietary/lib/hw/keystore.msm8916.so:system/vendor/firmware/keymaster/keystore.msm8916.so
 
 # Media
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/gucci/proprietary/lib/libOmxVdecHevc.so:system/lib/libOmxVdecHevc.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/libDivxDrm.so:system/vendor/lib/libDivxDrm.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libDivxDrm.so:system/vendor/lib/libDivxDrm.so \----
+	vendor/xiaomi/gucci/proprietary/lib/libdivxdrmdecrypt.so:system/lib/libdivxdrmdecrypt.so\
     vendor/xiaomi/gucci/proprietary/vendor/lib/libExtendedExtractor.so:system/vendor/lib/libExtendedExtractor.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libHevcSwDecoder.so:system/vendor/lib/libHevcSwDecoder.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libmmosal.so:system/vendor/lib/libmmosal.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libmmparser.so:system/vendor/lib/libmmparser.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libOmxAacDec.so:system/vendor/lib/libOmxAacDec.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/libOmxAmrwbplusDec.so:system/vendor/lib/libOmxAmrwbplusDec.so \
+#vendor/xiaomi/gucci/proprietary/vendor/lib/libOmxAmrwbplusDec.so:system/vendor/lib/libOmxAmrwbplusDec.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libOmxEvrcDec.so:system/vendor/lib/libOmxEvrcDec.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libOmxMux.so:system/vendor/lib/libOmxMux.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libOmxQcelp13Dec.so:system/vendor/lib/libOmxQcelp13Dec.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/libOmxWmaDec.so:system/vendor/lib/libOmxWmaDec.so
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libSHIMDivxDrm.so:system/vendor/lib/libSHIMDivxDrm.so
 
 # Perf
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/gucci/proprietary/bin/mpdecision:system/bin/mpdecision \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libqc-opt.so:system/vendor/lib/libqc-opt.so
-
+	
 # Qualcomm
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/gucci/proprietary/bin/irsc_util:system/bin/irsc_util \
