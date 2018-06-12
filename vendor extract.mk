@@ -431,13 +431,14 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_COPY_FILES += \
-    vendor/xiaomi/gucci/proprietary/bin/sensors.qcom:system/bin/sensors.qcom \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/hw/sensors.msm8226.so:system/vendor/lib/hw/sensors.msm8226.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/libAKM8963.so:system/vendor/lib/libAKM8963.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/libsensor1.so:system/vendor/lib/libsensor1.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/libsensor_reg.so:system/vendor/lib/libsensor_reg.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/libsensor_test.so:system/vendor/lib/libsensor_test.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/libsensor_user_cal.so:system/vendor/lib/libsensor_user_cal.so
+#vendor/xiaomi/gucci/proprietary/bin/sensors.qcom:system/bin/sensors.qcom \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/hw/sensors.msm8916.so:system/vendor/lib/hw/sensors.msm8916.so \
+#vendor/xiaomi/gucci/proprietary/vendor/lib/libAKM8963.so:system/vendor/lib/libAKM8963.so \
+#vendor/xiaomi/gucci/proprietary/vendor/lib/libsensor1.so:system/vendor/lib/libsensor1.so \
+	vendor/xiaomi/gucci/proprietary/vendor/lib/libsensorservice.so:system/vendor/lib/libsensorservice.so \
+#vendor/xiaomi/gucci/proprietary/vendor/lib/libsensor_reg.so:system/vendor/lib/libsensor_reg.so \
+#vendor/xiaomi/gucci/proprietary/vendor/lib/libsensor_test.so:system/vendor/lib/libsensor_test.so \
+#vendor/xiaomi/gucci/proprietary/vendor/lib/libsensor_user_cal.so:system/vendor/lib/libsensor_user_cal.so
 
 # Thermal
 PRODUCT_COPY_FILES += \
