@@ -317,7 +317,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gucci/proprietary/vendor/lib/drm/libdrmprplugin.so:system/vendor/lib/drm/libdrmprplugin.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libdrmdecrypt.so:system/vendor/lib/libdrmdecrypt.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/libdrmdiag.so:system/vendor/lib/libdrmdiag.so \
+#vendor/xiaomi/gucci/proprietary/vendor/lib/libdrmdiag.so:system/vendor/lib/libdrmdiag.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libdrmfs.so:system/vendor/lib/libdrmfs.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libdrmtime.so:system/vendor/lib/libdrmtime.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libQSEEComAPI.so:system/vendor/lib/libQSEEComAPI.so \
@@ -329,7 +329,7 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-    vendor/xiaomi/gucci/proprietary/bin/gsiff_daemon:system/bin/gsiff_daemon \
+#vendor/xiaomi/gucci/proprietary/bin/gsiff_daemon:system/bin/gsiff_daemon \
     vendor/xiaomi/gucci/proprietary/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
     vendor/xiaomi/gucci/proprietary/lib/libloc_ds_api.so:system/lib/libloc_ds_api.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libgeofence.so:system/vendor/lib/libgeofence.so \
@@ -338,10 +338,14 @@ PRODUCT_COPY_FILES += \
 
 # Graphics
 PRODUCT_COPY_FILES += \
+    vendor/xiaomi/gucci/proprietary/etc/firmware/a225_pfp.fw:system/etc/firmware/a225_pfp.fw \
+    vendor/xiaomi/gucci/proprietary/etc/firmware/a225_pm4.fw:system/etc/firmware/a225_pm4.fw \
+    vendor/xiaomi/gucci/proprietary/etc/firmware/a225p5_pm4.fw.fw:system/etc/firmware/a225p5_pm4.fw \
     vendor/xiaomi/gucci/proprietary/etc/firmware/a300_pfp.fw:system/etc/firmware/a300_pfp.fw \
-    vendor/xiaomi/gucci/proprietary/etc/firmware/a300_pm4.fw:system/etc/firmware/a300_pm4.fw \
-    vendor/xiaomi/gucci/proprietary/etc/firmware/a330_pfp.fw:system/etc/firmware/a330_pfp.fw \
-    vendor/xiaomi/gucci/proprietary/etc/firmware/a330_pm4.fw:system/etc/firmware/a330_pm4.fw \
+	vendor/xiaomi/gucci/proprietary/etc/firmware/a300_pm4.fw:system/etc/firmware/a300_pm4.fw \
+	vendor/xiaomi/gucci/proprietary/etc/firmware/a330_pfp.fw:system/etc/firmware/a330_pfp.fw \
+	vendor/xiaomi/gucci/proprietary/etc/firmware/a420_pfp.fw:system/etc/firmware/a420_pfp.fw\
+	vendor/xiaomi/gucci/proprietary/etc/firmware/a420_pm4.fw:system/etc/firmware/a420_pm4.fw \
     vendor/xiaomi/gucci/proprietary/lib/egl/egl.cfg:system/lib/egl/egl.cfg \
     vendor/xiaomi/gucci/proprietary/lib/egl/libGLES_android.so:system/lib/egl/libGLES_android.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/egl/eglsubAndroid.so:system/vendor/lib/egl/eglsubAndroid.so \
@@ -350,7 +354,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gucci/proprietary/vendor/lib/egl/libGLESv2_adreno.so:system/vendor/lib/egl/libGLESv2_adreno.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/egl/libq3dtools_adreno.so:system/vendor/lib/egl/libq3dtools_adreno.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libadreno_utils.so:system/vendor/lib/libadreno_utils.so \
-    vendor/xiaomi/gucci/proprietary/vendor/lib/libbccQTI.so:system/vendor/lib/libbccQTI.so \
+#vendor/xiaomi/gucci/proprietary/vendor/lib/libbccQTI.so:system/vendor/lib/libbccQTI.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libC2D2.so:system/vendor/lib/libC2D2.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libc2d30-a3xx.so:system/vendor/lib/libc2d30-a3xx.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libCB.so:system/vendor/lib/libCB.so \
@@ -365,11 +369,8 @@ PRODUCT_COPY_FILES += \
 
 # Keystore
 PRODUCT_COPY_FILES += \
-    vendor/xiaomi/gucci/proprietary/vendor/firmware/keymaster/keymaster.b00:system/vendor/firmware/keymaster/keymaster.b00 \
-    vendor/xiaomi/gucci/proprietary/vendor/firmware/keymaster/keymaster.b01:system/vendor/firmware/keymaster/keymaster.b01 \
-    vendor/xiaomi/gucci/proprietary/vendor/firmware/keymaster/keymaster.b02:system/vendor/firmware/keymaster/keymaster.b02 \
-    vendor/xiaomi/gucci/proprietary/vendor/firmware/keymaster/keymaster.b03:system/vendor/firmware/keymaster/keymaster.b03 \
-    vendor/xiaomi/gucci/proprietary/vendor/firmware/keymaster/keymaster.mdt:system/vendor/firmware/keymaster/keymaster.mdt
+	vendor/xiaomi/gucci/proprietary/lib/hw/keystore.default.so:system/lib/hw/keystore.default.so \
+	vendor/xiaomi/gucci/proprietary/lib/hw/keystore.qcom.so:system/vendor/firmware/keymaster/keystore.qcom.so
 
 # Media
 PRODUCT_COPY_FILES += \
