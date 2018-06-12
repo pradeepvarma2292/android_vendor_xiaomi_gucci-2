@@ -58,7 +58,7 @@ PRODUCT_COPY_FILES += \
 	vendor/xiaomi/gucci/proprietary/lib/libmmjpeg_interface.so:system/lib/libmmjpeg_interface.so \
 	vendor/xiaomi/gucci/proprietary/lib/libmm-qcamera.so:system/lib/libmm-qcamera.so \
 	vendor/xiaomi/gucci/proprietary/lib/libqomx_core.so:system/lib/libqomx_core.so \
-        vendor/xiaomi/gucci/proprietary/lib/hw/camera.msm8226.so:system/lib/hw/camera.msm8226.so \
+    vendor/xiaomi/gucci/proprietary/lib/hw/camera.msm8226.so:system/lib/hw/camera.msm8226.so \
 	vendor/xiaomi/gucci/proprietary/vendor/lib/libjpegdhw.so:system/vendor/lib/libjpegdhw.so \
 	vendor/xiaomi/gucci/proprietary/vendor/lib/libjpegehw.so:system/vendor/lib/libjpegehw.so \
 	vendor/xiaomi/gucci/proprietary/vendor/lib/libmmcamera2_c2d_module.so:system/vendor/lib/libmmcamera2_c2d_module.so \
@@ -91,10 +91,10 @@ PRODUCT_COPY_FILES += \
 	vendor/xiaomi/gucci/proprietary/vendor/lib/libmmcamera_ov8825.so:system/vendor/lib/libmmcamera_ov8825.so \
 	vendor/xiaomi/gucci/proprietary/vendor/lib/libmmcamera_ov8865_q8v18a.so:system/vendor/lib/libmmcamera_ov8865_q8v18a.so \
 	vendor/xiaomi/gucci/proprietary/vendor/lib/libmmcamera_ov9724.so:system/vendor/lib/libmmcamera_ov9724.so \
-        vendor/xiaomi/gucci/proprietary/vendor/lib/libmmcamera_ov9760_eeprom.so:system/vendor/lib/libmmcamera_ov9760_eeprom.so \
-        vendor/xiaomi/gucci/proprietary/vendor/lib/libmmcamera_ov9760_q1v05a.so:system/vendor/lib/libmmcamera_ov9760_q1v05a.so \
-        vendor/xiaomi/gucci/proprietary/vendor/lib/libmmcamera_s5k3h2yx_eeprom.so:system/vendor/lib/libmmcamera_s5k3h2yx_eeprom.so \
-        vendor/xiaomi/gucci/proprietary/vendor/lib/libmmcamera_s5k3h2yx_owt8a01a.so:system/vendor/lib/libmmcamera_s5k3h2yx_owt8a01a.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libmmcamera_ov9760_eeprom.so:system/vendor/lib/libmmcamera_ov9760_eeprom.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libmmcamera_ov9760_q1v05a.so:system/vendor/lib/libmmcamera_ov9760_q1v05a.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libmmcamera_s5k3h2yx_eeprom.so:system/vendor/lib/libmmcamera_s5k3h2yx_eeprom.so \
+    vendor/xiaomi/gucci/proprietary/vendor/lib/libmmcamera_s5k3h2yx_owt8a01a.so:system/vendor/lib/libmmcamera_s5k3h2yx_owt8a01a.so \
 	vendor/xiaomi/gucci/proprietary/vendor/lib/libmmcamera_s5k3l1yx.so:system/vendor/lib/libmmcamera_s5k3l1yx.so \
 	vendor/xiaomi/gucci/proprietary/vendor/lib/libmmcamera_s5k3l2_omiba01.so:system/vendor/lib/libmmcamera_s5k3l2_omiba01.so \
 	vendor/xiaomi/gucci/proprietary/vendor/lib/libmmcamera_s5k3l2_q13s01b.so:system/vendor/lib/libmmcamera_s5k3l2_q13s01b.so \
@@ -237,7 +237,6 @@ PRODUCT_COPY_FILES += \
 	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_s5k3l1yx_hfr_60fps.so:system/vendor/lib/libchromatix_s5k3l1yx_hfr_60fps.so\
 	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_s5k3l1yx_hfr_90fps.so:system/vendor/lib/libchromatix_s5k3l1yx_hfr_90fps.so\
 	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_s5k3l1yx_hfr_120fps.so:system/vendor/lib/libchromatix_s5k3l1yx_hfr_120fps.so\
-	vendor/xiaomi/gucci/proprietary/vendor/lib/xxxxxxxxxxxxxxxxxx.so:system/vendor/lib/xxxxxxxxxxxxxxxxxxxxxxx.so\
 	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_s5k3l1yx_liveshot.so:system/vendor/lib/libchromatix_s5k3l1yx_liveshot.so\
 	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_s5k3l1yx_preview.so:system/vendor/lib/libchromatix_s5k3l1yx_preview.so\
 	vendor/xiaomi/gucci/proprietary/vendor/lib/libchromatix_s5k3l1yx_snapshot.so:system/vendor/lib/libchromatix_s5k3l1yx_snapshot.so\
@@ -441,10 +440,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gucci/proprietary/bin/thermal-engine:system/bin/thermal-engine \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libthermalclient.so:system/vendor/lib/libthermalclient.so \
     vendor/xiaomi/gucci/proprietary/vendor/lib/libthermalioctl.so:system/vendor/lib/libthermalioctl.so
-
-# Time services
-PRODUCT_COPY_FILES += \
-    vendor/xiaomi/gucci/proprietary/bin/time_daemon:system/bin/time_daemon
 
 # Venus (media) firmware
 PRODUCT_COPY_FILES += \
