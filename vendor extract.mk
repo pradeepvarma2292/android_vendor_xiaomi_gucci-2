@@ -438,7 +438,9 @@ PRODUCT_COPY_FILES += \
 	vendor/xiaomi/gucci/proprietary/vendor/lib/libsensorservice.so:system/vendor/lib/libsensorservice.so \
 #vendor/xiaomi/gucci/proprietary/vendor/lib/libsensor_reg.so:system/vendor/lib/libsensor_reg.so \
 #vendor/xiaomi/gucci/proprietary/vendor/lib/libsensor_test.so:system/vendor/lib/libsensor_test.so \
-#vendor/xiaomi/gucci/proprietary/vendor/lib/libsensor_user_cal.so:system/vendor/lib/libsensor_user_cal.so
+#vendor/xiaomi/gucci/proprietary/vendor/lib/libsensor_user_cal.so:system/vendor/lib/libsensor_user_cal.so\
+	vendor/xiaomi/gucci/proprietary/lib/libhardware.so:system/lib/libhardware.so
+	vendor/xiaomi/gucci/proprietary/lib/libhardware_legacy.so:system/lib/libhardware_legacy.so
 
 # Thermal
 PRODUCT_COPY_FILES += \
